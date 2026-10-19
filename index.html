@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Andika | Creative Website</title>
+
+    <!-- Font dari Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Ikon website -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- File CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="#beranda" class="logo">
+            ANDIKA<span>.</span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle"
+                aria-label="Buka menu" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#beranda" class="nav-link active">Beranda</a></li>
+            <li><a href="#tentang" class="nav-link">Tentang</a></li>
+            <li><a href="#layanan" class="nav-link">Layanan</a></li>
+            <li><a href="#kontak" class="nav-link">Kontak</a></li>
+        </ul>
+
+        <a href="#kontak" class="nav-button">Hubungi Saya ↗</a>
+    </nav>
+
+    <!-- HERO / HALAMAN UTAMA -->
+    <section class="hero" id="beranda">
+        <div class="hero-content">
+            <div class="status">
+                <span class="status-dot"></span>
+                SELAMAT DATANG DI WEBSITE SAYA
+            </div>
+
+            <h1>
+                Membangun Ide<br>
+                Menjadi <span>Nyata.</span>
+            </h1>
+
+            <p class="hero-description">
+                Halo! Saya Andika. Saya sedang belajar membuat
+                website modern, kreatif, dan responsif menggunakan
+                teknologi web.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#tentang" class="button-primary">
+                    Jelajahi Website <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a href="#layanan" class="button-secondary">
+                    Pelajari Selengkapnya
+                </a>
+            </div>
+
+            <div class="hero-stats">
+                <div>
+                    <h3>HTML</h3>
+                    <p>Struktur</p>
+                </div>
+                <div>
+                    <h3>CSS</h3>
+                    <p>Desain</p>
+                </div>
+                <div>
+                    <h3>JS</h3>
+                    <p>Interaksi</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-visual">
+            <div class="glow"></div>
+
+            <div class="code-card">
+                <div class="code-header">
+                    <div class="window-dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <p>my-website.html</p>
+                </div>
+
+                <div class="code-body">
+                    <p><span class="code-purple">&lt;h1&gt;</span></p>
+                    <h2>Hello, World!</h2>
+                    <p><span class="code-purple">&lt;/h1&gt;</span></p>
+                    <br>
+                    <p><span class="code-blue">function</span> createWebsite() {</p>
+                    <p class="indent">return <span class="code-green">"My Dream"</span>;</p>
+                    <p>}</p>
+                    <br>
+                    <div class="code-success">
+                        <i class="fa-solid fa-circle-check"></i>
+                        Website berhasil dijalankan
+                    </div>
+                </div>
+            </div>
+
+            <div class="floating-badge badge-top">
+                <i class="fa-solid fa-code"></i>
+                Creative Developer
+            </div>
+
+            <div class="floating-badge badge-bottom">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                Modern Design
+            </div>
+        </div>
+    </section>
+
+    <!-- TENTANG -->
+    <section class="section" id="tentang">
+        <div class="section-label">01 — TENTANG SAYA</div>
+
+        <h2 class="section-title">
+            Terus Belajar,<br>
+            Terus <span>Berkembang.</span>
+        </h2>
+
+        <p class="section-description">
+            Website ini adalah langkah awal perjalanan saya
+            di dunia pengembangan web. Saya terus belajar,
+            berlatih, dan mengembangkan keterampilan baru.
+        </p>
+    </section>
+
+    <!-- LAYANAN / FITUR -->
+    <section class="section services" id="layanan">
+        <div class="section-label">02 — YANG SAYA PELAJARI</div>
+
+        <h2 class="section-title">
+            Teknologi <span>Website</span>
+        </h2>
+
+        <div class="service-grid">
+            <article class="service-card">
+                <div class="service-icon orange">
+                    <i class="fa-brands fa-html5"></i>
+                </div>
+                <h3>HTML</h3>
+                <p>Menyusun struktur halaman dan konten website.</p>
+                <span class="card-number">01 / STRUCTURE</span>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon blue">
+                    <i class="fa-brands fa-css3-alt"></i>
+                </div>
+                <h3>CSS</h3>
+                <p>Membuat tampilan website indah dan responsif.</p>
+                <span class="card-number">02 / DESIGN</span>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon yellow">
+                    <i class="fa-brands fa-js"></i>
+                </div>
+                <h3>JavaScript</h3>
+                <p>Menambahkan interaksi dan fungsi dinamis.</p>
+                <span class="card-number">03 / INTERACTION</span>
+            </article>
+        </div>
+    </section>
+
+    <!-- KONTAK -->
+    <section class="contact" id="kontak">
+        <div class="section-label">03 — KONTAK</div>
+
+        <h2>Ada ide menarik?</h2>
+        <p>Mari terus belajar dan menciptakan sesuatu yang hebat.</p>
+
+        <a href="mailto:emailkamu@example.com" class="button-primary">
+            <i class="fa-regular fa-envelope"></i>
+            Kirim Email
+        </a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <a href="#beranda" class="logo">ANDIKA<span>.</span></a>
+        <p>© 2026 Andika. Dibuat dengan semangat belajar.</p>
+        <a href="#beranda" class="back-top">
+            Kembali ke atas ↑
+        </a>
+    </footer>
+
+    <!-- File JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
