@@ -4,205 +4,292 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
 
-    <title>Andika | Creative Website</title>
+    <meta name="description" content="BLOG ANDIKAAAKBAR — blog pribadi Andika Akbar yang membahas teknologi, bisnis, pengembangan diri, dan pengalaman.">
 
-    <!-- Font dari Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>BLOG ANDIKAAAKBAR | ANDIKA AKBAR</title>
 
-    <!-- Ikon website -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <!-- File CSS -->
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
+
 <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <a href="#beranda" class="logo">
-            ANDIKA<span>.</span>
-        </a>
+    <!-- NAVIGASI -->
+    <header class="navbar">
+        <div class="container nav-container">
 
-        <button class="menu-toggle" id="menuToggle"
-                aria-label="Buka menu" aria-expanded="false">
-            <i class="fa-solid fa-bars"></i>
-        </button>
+            <a href="#beranda" class="logo">
+                ANDIKA AKBAR<span>.</span>
+            </a>
 
-        <ul class="nav-menu" id="navMenu">
-            <li><a href="#beranda" class="nav-link active">Beranda</a></li>
-            <li><a href="#tentang" class="nav-link">Tentang</a></li>
-            <li><a href="#layanan" class="nav-link">Layanan</a></li>
-            <li><a href="#kontak" class="nav-link">Kontak</a></li>
-        </ul>
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Buka menu navigasi"
+                aria-expanded="false"
+                aria-controls="navLinks">
+                ☰
+            </button>
 
-        <a href="#kontak" class="nav-button">Hubungi Saya ↗</a>
-    </nav>
+            <nav aria-label="Navigasi utama">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#beranda">Beranda</a></li>
+                    <li><a href="#artikel">Artikel</a></li>
+                    <li><a href="#tentang">Tentang Saya</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                    <li>
+                        <button
+                            class="theme-toggle"
+                            id="themeToggle"
+                            type="button"
+                            aria-label="Aktifkan mode gelap"
+                            title="Ganti tema">
+                            ◐
+                        </button>
+                    </li>
+                </ul>
+            </nav>
 
-    <!-- HERO / HALAMAN UTAMA -->
-    <section class="hero" id="beranda">
-        <div class="hero-content">
-            <div class="status">
-                <span class="status-dot"></span>
-                SELAMAT DATANG DI WEBSITE SAYA
+        </div>
+    </header>
+
+
+    <!-- KONTEN UTAMA -->
+    <main>
+
+        <!-- HERO -->
+        <section class="hero" id="beranda">
+            <div class="container hero-content">
+
+                <span class="eyebrow">
+                    BLOG PRIBADI — ANDIKA AKBAR
+                </span>
+
+                <h1>
+                    ANDIKA AKBAR<br>
+                    <span>Personal Blog.</span>
+                </h1>
+
+                <p>
+                    Selamat datang di Blog Andika Akbar.
+                    Tempat berbagi pemikiran, pengetahuan, teknologi,
+                    bisnis, pengalaman, dan perjalanan untuk terus
+                    belajar serta berkembang.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#artikel" class="btn">
+                        Jelajahi Artikel →
+                    </a>
+
+                    <a href="#tentang" class="btn btn-outline">
+                        Tentang Saya
+                    </a>
+                </div>
+
+                <div class="hero-note">
+                    <span class="hero-line"></span>
+                    <span>Berpikir. Belajar. Berkembang.</span>
+                </div>
+
             </div>
+        </section>
 
-            <h1>
-                Membangun Ide<br>
-                Menjadi <span>Nyata.</span>
-            </h1>
 
-            <p class="hero-description">
-                Halo! Saya Andika. Saya sedang belajar membuat
-                website modern, kreatif, dan responsif menggunakan
-                teknologi web.
-            </p>
+        <!-- ARTIKEL -->
+        <section class="articles-section" id="artikel">
+            <div class="container">
 
-            <div class="hero-actions">
-                <a href="#tentang" class="button-primary">
-                    Jelajahi Website <i class="fa-solid fa-arrow-right"></i>
+                <div class="section-heading">
+                    <div>
+                        <span class="eyebrow">CATATAN & PEMIKIRAN</span>
+                        <h2>Artikel Pilihan</h2>
+                        <p>
+                            Ide, pengalaman, dan pengetahuan
+                            yang layak untuk dibagikan.
+                        </p>
+                    </div>
+
+                    <div class="search-wrapper">
+                        <label for="searchInput" class="sr-only">
+                            Cari artikel
+                        </label>
+
+                        <input
+                            type="search"
+                            id="searchInput"
+                            class="search-box"
+                            placeholder="Cari artikel..."
+                        >
+                    </div>
+                </div>
+
+                <!-- FILTER ARTIKEL -->
+                <div class="filter-buttons" id="filterButtons">
+                    <button
+                        class="filter-btn active"
+                        data-category="Semua"
+                        aria-pressed="true"
+                        type="button">
+                        Semua
+                    </button>
+
+                    <button
+                        class="filter-btn"
+                        data-category="Teknologi"
+                        aria-pressed="false"
+                        type="button">
+                        Teknologi
+                    </button>
+
+                    <button
+                        class="filter-btn"
+                        data-category="Pengembangan Diri"
+                        aria-pressed="false"
+                        type="button">
+                        Pengembangan Diri
+                    </button>
+
+                    <button
+                        class="filter-btn"
+                        data-category="Bisnis"
+                        aria-pressed="false"
+                        type="button">
+                        Bisnis
+                    </button>
+
+                    <button
+                        class="filter-btn"
+                        data-category="Pengalaman"
+                        aria-pressed="false"
+                        type="button">
+                        Pengalaman
+                    </button>
+                </div>
+
+                <!-- KARTU ARTIKEL DIBUAT OLEH JAVASCRIPT -->
+                <div
+                    class="articles-grid"
+                    id="articlesGrid"
+                    aria-live="polite">
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- TENTANG SAYA -->
+        <section class="about-section" id="tentang">
+            <div class="container about-grid">
+
+                <div class="about-heading">
+                    <span class="about-label">TENTANG PENULIS</span>
+
+                    <h2>
+                        Mengenal<br>
+                        Andika Akbar.
+                    </h2>
+                </div>
+
+                <div class="about-description">
+                    <p>
+                        Halo, saya Andika Akbar. Saya memiliki
+                        ketertarikan untuk mempelajari teknologi,
+                        pengembangan website, bisnis, dan berbagai
+                        pengetahuan baru.
+                    </p>
+
+                    <p>
+                        Melalui BLOG ANDIKAAAKBAR, saya ingin
+                        mendokumentasikan proses belajar sekaligus
+                        membagikan pemikiran dan pengalaman yang
+                        mungkin bermanfaat bagi pembaca.
+                    </p>
+
+                    <p>
+                        Saya percaya bahwa perkembangan besar
+                        dapat dimulai dari langkah kecil,
+                        rasa ingin tahu, dan kemauan untuk terus belajar.
+                    </p>
+
+                    <a href="#kontak" class="text-link">
+                        Mari terhubung <span>→</span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- KONTAK -->
+        <section class="contact-section" id="kontak">
+            <div class="container">
+
+                <span class="eyebrow">RUANG UNTUK TERHUBUNG</span>
+
+                <h2>
+                    Mari bertukar<br>
+                    ide dan pemikiran.
+                </h2>
+
+                <p>
+                    Punya pertanyaan, ide, atau ingin berdiskusi?
+                    Saya terbuka untuk terhubung dan bertukar wawasan.
+                </p>
+
+                <!-- GANTI EMAIL INI DENGAN EMAIL KAMU -->
+                <a
+                    href="mailto:emailkamu@example.com"
+                    class="btn"
+                    id="contactButton">
+                    Hubungi Saya →
                 </a>
 
-                <a href="#layanan" class="button-secondary">
-                    Pelajari Selengkapnya
-                </a>
             </div>
+        </section>
 
-            <div class="hero-stats">
-                <div>
-                    <h3>HTML</h3>
-                    <p>Struktur</p>
-                </div>
-                <div>
-                    <h3>CSS</h3>
-                    <p>Desain</p>
-                </div>
-                <div>
-                    <h3>JS</h3>
-                    <p>Interaksi</p>
-                </div>
-            </div>
-        </div>
+    </main>
 
-        <div class="hero-visual">
-            <div class="glow"></div>
-
-            <div class="code-card">
-                <div class="code-header">
-                    <div class="window-dots">
-                        <span></span><span></span><span></span>
-                    </div>
-                    <p>my-website.html</p>
-                </div>
-
-                <div class="code-body">
-                    <p><span class="code-purple">&lt;h1&gt;</span></p>
-                    <h2>Hello, World!</h2>
-                    <p><span class="code-purple">&lt;/h1&gt;</span></p>
-                    <br>
-                    <p><span class="code-blue">function</span> createWebsite() {</p>
-                    <p class="indent">return <span class="code-green">"My Dream"</span>;</p>
-                    <p>}</p>
-                    <br>
-                    <div class="code-success">
-                        <i class="fa-solid fa-circle-check"></i>
-                        Website berhasil dijalankan
-                    </div>
-                </div>
-            </div>
-
-            <div class="floating-badge badge-top">
-                <i class="fa-solid fa-code"></i>
-                Creative Developer
-            </div>
-
-            <div class="floating-badge badge-bottom">
-                <i class="fa-solid fa-wand-magic-sparkles"></i>
-                Modern Design
-            </div>
-        </div>
-    </section>
-
-    <!-- TENTANG -->
-    <section class="section" id="tentang">
-        <div class="section-label">01 — TENTANG SAYA</div>
-
-        <h2 class="section-title">
-            Terus Belajar,<br>
-            Terus <span>Berkembang.</span>
-        </h2>
-
-        <p class="section-description">
-            Website ini adalah langkah awal perjalanan saya
-            di dunia pengembangan web. Saya terus belajar,
-            berlatih, dan mengembangkan keterampilan baru.
-        </p>
-    </section>
-
-    <!-- LAYANAN / FITUR -->
-    <section class="section services" id="layanan">
-        <div class="section-label">02 — YANG SAYA PELAJARI</div>
-
-        <h2 class="section-title">
-            Teknologi <span>Website</span>
-        </h2>
-
-        <div class="service-grid">
-            <article class="service-card">
-                <div class="service-icon orange">
-                    <i class="fa-brands fa-html5"></i>
-                </div>
-                <h3>HTML</h3>
-                <p>Menyusun struktur halaman dan konten website.</p>
-                <span class="card-number">01 / STRUCTURE</span>
-            </article>
-
-            <article class="service-card">
-                <div class="service-icon blue">
-                    <i class="fa-brands fa-css3-alt"></i>
-                </div>
-                <h3>CSS</h3>
-                <p>Membuat tampilan website indah dan responsif.</p>
-                <span class="card-number">02 / DESIGN</span>
-            </article>
-
-            <article class="service-card">
-                <div class="service-icon yellow">
-                    <i class="fa-brands fa-js"></i>
-                </div>
-                <h3>JavaScript</h3>
-                <p>Menambahkan interaksi dan fungsi dinamis.</p>
-                <span class="card-number">03 / INTERACTION</span>
-            </article>
-        </div>
-    </section>
-
-    <!-- KONTAK -->
-    <section class="contact" id="kontak">
-        <div class="section-label">03 — KONTAK</div>
-
-        <h2>Ada ide menarik?</h2>
-        <p>Mari terus belajar dan menciptakan sesuatu yang hebat.</p>
-
-        <a href="mailto:emailkamu@example.com" class="button-primary">
-            <i class="fa-regular fa-envelope"></i>
-            Kirim Email
-        </a>
-    </section>
 
     <!-- FOOTER -->
-    <footer>
-        <a href="#beranda" class="logo">ANDIKA<span>.</span></a>
-        <p>© 2026 Andika. Dibuat dengan semangat belajar.</p>
-        <a href="#beranda" class="back-top">
-            Kembali ke atas ↑
-        </a>
+    <footer class="footer">
+        <div class="container footer-content">
+
+            <a href="#beranda" class="logo footer-logo">
+                ANDIKA AKBAR<span>.</span>
+            </a>
+
+            <p>
+                © <span id="currentYear"></span>
+                BLOG ANDIKAAAKBAR. Hak cipta dilindungi.
+            </p>
+
+            <div class="footer-links">
+                <a href="#beranda">Beranda</a>
+                <a href="#artikel">Artikel</a>
+                <a href="#kontak">Kontak</a>
+            </div>
+
+        </div>
     </footer>
 
-    <!-- File JavaScript -->
-    <script src="script.js"></script>
+
+    <!-- POPUP BACA ARTIKEL -->
+    <dialog id="articleDialog" aria-labelledby="dialogTitle">
+
+        <button
+            type="button"
+            class="dialog-close"
+            id="dialogClose">
+            ✕ Tutup
+        </button>
+
+        <div id="dialogContent"></div>
+
+    </dialog>
+
 </body>
 </html>
