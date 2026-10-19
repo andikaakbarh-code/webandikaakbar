@@ -4,292 +4,296 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#ffffff">
 
-    <meta name="description" content="BLOG ANDIKAAAKBAR — blog pribadi Andika Akbar yang membahas teknologi, bisnis, pengembangan diri, dan pengalaman.">
+    <title>Andika Akbar | Personal Journal</title>
+    <meta name="description"
+          content="Blog pribadi Andika Akbar tentang keseharian, pengalaman, hobi, dan cerita kehidupan.">
 
-    <title>BLOG ANDIKAAAKBAR | ANDIKA AKBAR</title>
+    <!-- FONT ELEGAN DARI GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
 
+    <!-- FILE CSS -->
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
 
 <body>
 
-    <!-- NAVIGASI -->
-    <header class="navbar">
-        <div class="container nav-container">
+    <!-- ========== NAVIGASI ========== -->
+    <header class="header">
+        <nav class="navbar container">
+            <a href="#home" class="logo">ANDIKA<span>AKBAR.</span></a>
 
-            <a href="#beranda" class="logo">
-                ANDIKA AKBAR<span>.</span>
-            </a>
-
-            <button
-                class="menu-toggle"
-                id="menuToggle"
-                type="button"
-                aria-label="Buka menu navigasi"
-                aria-expanded="false"
-                aria-controls="navLinks">
+            <button class="menu-toggle" id="menuToggle"
+                    aria-label="Buka menu" aria-expanded="false">
                 ☰
             </button>
 
-            <nav aria-label="Navigasi utama">
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="#beranda">Beranda</a></li>
-                    <li><a href="#artikel">Artikel</a></li>
-                    <li><a href="#tentang">Tentang Saya</a></li>
-                    <li><a href="#kontak">Kontak</a></li>
-                    <li>
-                        <button
-                            class="theme-toggle"
-                            id="themeToggle"
-                            type="button"
-                            aria-label="Aktifkan mode gelap"
-                            title="Ganti tema">
-                            ◐
-                        </button>
-                    </li>
-                </ul>
-            </nav>
-
-        </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#cerita">Cerita</a></li>
+                <li><a href="#galeri">Galeri</a></li>
+                <li><a href="#tentang">Tentang Aku</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
     </header>
 
 
-    <!-- KONTEN UTAMA -->
+    <!-- ========== BERANDA ========== -->
     <main>
+        <section class="hero" id="home">
+            <div class="container hero-grid">
 
-        <!-- HERO -->
-        <section class="hero" id="beranda">
-            <div class="container hero-content">
+                <div class="hero-text">
+                    <p class="eyebrow">JURNAL PRIBADI · ANDIKA AKBAR</p>
 
-                <span class="eyebrow">
-                    BLOG PRIBADI — ANDIKA AKBAR
-                </span>
+                    <h1>
+                        Cerita kecil,<br>
+                        <em>kenangan selamanya.</em>
+                    </h1>
 
-                <h1>
-                    ANDIKA AKBAR<br>
-                    <span>Personal Blog.</span>
-                </h1>
+                    <p class="hero-description">
+                        Tempatku menulis perjalanan hidup, berbagi
+                        pengalaman sehari-hari, dan menyimpan momen
+                        sederhana yang memiliki arti.
+                    </p>
 
-                <p>
-                    Selamat datang di Blog Andika Akbar.
-                    Tempat berbagi pemikiran, pengetahuan, teknologi,
-                    bisnis, pengalaman, dan perjalanan untuk terus
-                    belajar serta berkembang.
-                </p>
-
-                <div class="hero-actions">
-                    <a href="#artikel" class="btn">
-                        Jelajahi Artikel →
+                    <a href="#cerita" class="button">
+                        Jelajahi Ceritaku ↗
                     </a>
 
-                    <a href="#tentang" class="btn btn-outline">
-                        Tentang Saya
-                    </a>
+                    <p class="hero-note">
+                        Sebuah ruang sederhana untuk mengenang perjalanan.
+                    </p>
                 </div>
 
-                <div class="hero-note">
-                    <span class="hero-line"></span>
-                    <span>Berpikir. Belajar. Berkembang.</span>
+                <div class="hero-photo">
+                    <!-- GANTI FOTO DI SINI: FOTO UTAMA KAMU -->
+                    <!-- Simpan foto di img/foto-utama.jpg -->
+
+                    <img
+                        src="img/foto-utama.jpg"
+                        alt="Foto utama Andika Akbar"
+                        onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=85';"
+                    >
+
+                    <div class="photo-label">
+                        <span>PERSONAL JOURNAL</span>
+                        <span>EST. 2026</span>
+                    </div>
                 </div>
 
             </div>
         </section>
 
 
-        <!-- ARTIKEL -->
-        <section class="articles-section" id="artikel">
-            <div class="container">
+        <!-- ========== PENGANTAR ========== -->
+        <section class="intro">
+            <div class="container intro-grid">
+                <p class="eyebrow">SEDIKIT TENTANG BLOG INI</p>
 
+                <p class="intro-text">
+                    Hidup terdiri dari banyak cerita. Ada hari yang
+                    menyenangkan, pengalaman baru, waktu untuk belajar,
+                    dan momen sederhana yang ingin kuingat.
+                    Blog ini menjadi tempat untuk menyimpan semuanya.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- ========== CERITA / ARTIKEL ========== -->
+        <section class="section container" id="cerita">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">CATATAN KEHIDUPAN</p>
+                    <h2>Cerita Terbaru</h2>
+                </div>
+
+                <p class="section-subtitle">
+                    Potongan cerita dari keseharianku.
+                </p>
+            </div>
+
+            <!-- Tombol filter artikel -->
+            <div class="filters" id="filters">
+                <button class="filter-btn active" data-category="Semua">
+                    Semua
+                </button>
+                <button class="filter-btn" data-category="Keseharian">
+                    Keseharian
+                </button>
+                <button class="filter-btn" data-category="Pengalaman">
+                    Pengalaman
+                </button>
+                <button class="filter-btn" data-category="Hobi">
+                    Hobi
+                </button>
+            </div>
+
+            <!-- Artikel akan dibuat otomatis oleh JavaScript -->
+            <div class="article-grid" id="articleGrid"></div>
+
+            <p class="empty-message" id="emptyMessage" hidden>
+                Belum ada cerita dalam kategori ini.
+            </p>
+        </section>
+
+
+        <!-- ========== GALERI FOTO ========== -->
+        <section class="gallery-section" id="galeri">
+            <div class="container">
                 <div class="section-heading">
                     <div>
-                        <span class="eyebrow">CATATAN & PEMIKIRAN</span>
-                        <h2>Artikel Pilihan</h2>
-                        <p>
-                            Ide, pengalaman, dan pengetahuan
-                            yang layak untuk dibagikan.
-                        </p>
+                        <p class="eyebrow">ALBUM PRIBADI</p>
+                        <h2>Potongan Kenangan</h2>
                     </div>
 
-                    <div class="search-wrapper">
-                        <label for="searchInput" class="sr-only">
-                            Cari artikel
-                        </label>
-
-                        <input
-                            type="search"
-                            id="searchInput"
-                            class="search-box"
-                            placeholder="Cari artikel..."
-                        >
-                    </div>
+                    <p class="section-subtitle">
+                        Foto-foto yang menyimpan cerita.
+                    </p>
                 </div>
 
-                <!-- FILTER ARTIKEL -->
-                <div class="filter-buttons" id="filterButtons">
-                    <button
-                        class="filter-btn active"
-                        data-category="Semua"
-                        aria-pressed="true"
-                        type="button">
-                        Semua
-                    </button>
+                <div class="gallery-grid">
 
-                    <button
-                        class="filter-btn"
-                        data-category="Teknologi"
-                        aria-pressed="false"
-                        type="button">
-                        Teknologi
-                    </button>
+                    <figure class="gallery-item">
+                        <!-- GANTI FOTO GALERI 1 -->
+                        <!-- Simpan sebagai img/galeri-1.jpg -->
+                        <img src="img/galeri-1.jpg"
+                             alt="Kenangan pertama"
+                             loading="lazy"
+                             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=800&q=80';">
+                        <figcaption>01 — Sebuah Momen</figcaption>
+                    </figure>
 
-                    <button
-                        class="filter-btn"
-                        data-category="Pengembangan Diri"
-                        aria-pressed="false"
-                        type="button">
-                        Pengembangan Diri
-                    </button>
+                    <figure class="gallery-item">
+                        <!-- GANTI FOTO GALERI 2 -->
+                        <!-- Simpan sebagai img/galeri-2.jpg -->
+                        <img src="img/galeri-2.jpg"
+                             alt="Pemandangan favorit"
+                             loading="lazy"
+                             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80';">
+                        <figcaption>02 — Suasana Hari</figcaption>
+                    </figure>
 
-                    <button
-                        class="filter-btn"
-                        data-category="Bisnis"
-                        aria-pressed="false"
-                        type="button">
-                        Bisnis
-                    </button>
+                    <figure class="gallery-item">
+                        <!-- GANTI FOTO GALERI 3 -->
+                        <!-- Simpan sebagai img/galeri-3.jpg -->
+                        <img src="img/galeri-3.jpg"
+                             alt="Aktivitas sehari-hari"
+                             loading="lazy"
+                             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1490730141103-6cac27aaab94?auto=format&fit=crop&w=800&q=80';">
+                        <figcaption>03 — Kenangan Lainnya</figcaption>
+                    </figure>
 
-                    <button
-                        class="filter-btn"
-                        data-category="Pengalaman"
-                        aria-pressed="false"
-                        type="button">
-                        Pengalaman
-                    </button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ========== TENTANG AKU ========== -->
+        <section class="section container" id="tentang">
+            <div class="about-grid">
+
+                <div class="about-photo">
+                    <!-- GANTI FOTO DI SINI: FOTO PROFIL -->
+                    <!-- Simpan sebagai img/profil.jpg -->
+
+                    <img
+                        src="img/profil.jpg"
+                        alt="Foto profil Andika Akbar"
+                        loading="lazy"
+                        onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=85';"
+                    >
                 </div>
 
-                <!-- KARTU ARTIKEL DIBUAT OLEH JAVASCRIPT -->
-                <div
-                    class="articles-grid"
-                    id="articlesGrid"
-                    aria-live="polite">
+                <div class="about-text">
+                    <p class="eyebrow">KENAL LEBIH DEKAT</p>
+                    <h2>Halo, aku Andika.</h2>
+
+                    <p>
+                        Selamat datang di ruang pribadiku. Aku membuat
+                        blog ini untuk mencatat pengalaman, aktivitas,
+                        pemikiran, dan berbagai hal yang terjadi dalam
+                        perjalanan hidupku.
+                    </p>
+
+                    <p>
+                        Aku ingin belajar menghargai proses, menikmati
+                        momen sederhana, dan menyimpan kenangan yang
+                        mungkin suatu hari akan menyenangkan untuk dibaca
+                        kembali.
+                    </p>
+
+                    <p class="signature">Salam hangat, Andika.</p>
                 </div>
 
             </div>
         </section>
 
 
-        <!-- TENTANG SAYA -->
-        <section class="about-section" id="tentang">
-            <div class="container about-grid">
-
-                <div class="about-heading">
-                    <span class="about-label">TENTANG PENULIS</span>
-
-                    <h2>
-                        Mengenal<br>
-                        Andika Akbar.
-                    </h2>
-                </div>
-
-                <div class="about-description">
-                    <p>
-                        Halo, saya Andika Akbar. Saya memiliki
-                        ketertarikan untuk mempelajari teknologi,
-                        pengembangan website, bisnis, dan berbagai
-                        pengetahuan baru.
-                    </p>
-
-                    <p>
-                        Melalui BLOG ANDIKAAAKBAR, saya ingin
-                        mendokumentasikan proses belajar sekaligus
-                        membagikan pemikiran dan pengalaman yang
-                        mungkin bermanfaat bagi pembaca.
-                    </p>
-
-                    <p>
-                        Saya percaya bahwa perkembangan besar
-                        dapat dimulai dari langkah kecil,
-                        rasa ingin tahu, dan kemauan untuk terus belajar.
-                    </p>
-
-                    <a href="#kontak" class="text-link">
-                        Mari terhubung <span>→</span>
-                    </a>
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- KONTAK -->
+        <!-- ========== KONTAK ========== -->
         <section class="contact-section" id="kontak">
-            <div class="container">
-
-                <span class="eyebrow">RUANG UNTUK TERHUBUNG</span>
-
-                <h2>
-                    Mari bertukar<br>
-                    ide dan pemikiran.
-                </h2>
+            <div class="container contact-content">
+                <p class="eyebrow">TERHUBUNG</p>
+                <h2>Mari tetap terhubung.</h2>
 
                 <p>
-                    Punya pertanyaan, ide, atau ingin berdiskusi?
-                    Saya terbuka untuk terhubung dan bertukar wawasan.
+                    Kamu bisa menemukan aku melalui tautan di bawah ini.
                 </p>
 
-                <!-- GANTI EMAIL INI DENGAN EMAIL KAMU -->
-                <a
-                    href="mailto:emailkamu@example.com"
-                    class="btn"
-                    id="contactButton">
-                    Hubungi Saya →
-                </a>
-
+                <!-- GANTI # DENGAN LINK MEDIA SOSIAL KAMU -->
+                <div class="social-links">
+                    <a href="#" target="_blank" rel="noopener">Instagram ↗</a>
+                    <a href="#" target="_blank" rel="noopener">TikTok ↗</a>
+                    <a href="mailto:emailkamu@example.com">Email ↗</a>
+                </div>
             </div>
         </section>
-
     </main>
 
 
-    <!-- FOOTER -->
+    <!-- ========== FOOTER ========== -->
     <footer class="footer">
-        <div class="container footer-content">
-
-            <a href="#beranda" class="logo footer-logo">
-                ANDIKA AKBAR<span>.</span>
-            </a>
+        <div class="container footer-inner">
+            <a href="#home" class="logo">ANDIKA<span>AKBAR.</span></a>
 
             <p>
-                © <span id="currentYear"></span>
-                BLOG ANDIKAAAKBAR. Hak cipta dilindungi.
+                © <span id="currentYear"></span> Andika Akbar.
+                Dibuat dengan cerita dan kenangan.
             </p>
 
-            <div class="footer-links">
-                <a href="#beranda">Beranda</a>
-                <a href="#artikel">Artikel</a>
-                <a href="#kontak">Kontak</a>
-            </div>
-
+            <a href="#home" class="back-top">Kembali ke atas ↑</a>
         </div>
     </footer>
 
 
-    <!-- POPUP BACA ARTIKEL -->
-    <dialog id="articleDialog" aria-labelledby="dialogTitle">
+    <!-- ========== POPUP UNTUK MEMBACA ARTIKEL ========== -->
+    <div class="modal" id="articleModal"
+         role="dialog" aria-modal="true"
+         aria-labelledby="modalTitle">
 
-        <button
-            type="button"
-            class="dialog-close"
-            id="dialogClose">
-            ✕ Tutup
-        </button>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose"
+                    aria-label="Tutup artikel">×</button>
 
-        <div id="dialogContent"></div>
+            <p class="eyebrow" id="modalCategory"></p>
+            <h2 id="modalTitle">Judul cerita</h2>
+            <p class="modal-date" id="modalDate"></p>
 
-    </dialog>
+            <!-- FOTO ARTIKEL DITAMPILKAN OLEH JAVASCRIPT -->
+            <img id="modalImage" src="" alt=""
+                 class="modal-image">
 
+            <div id="modalBody" class="modal-body"></div>
+        </div>
+    </div>
+
+
+    <!-- FILE JAVASCRIPT -->
+    <script src="script.js"></script>
 </body>
 </html>

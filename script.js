@@ -1,367 +1,265 @@
 
-/* ==================================================
-   BLOG ANDIKAAAKBAR
-   JavaScript — Fitur Website
-================================================== */
+// ==========================================
+// BLOG ANDIKA AKBAR
+// JAVASCRIPT UNTUK INTERAKSI WEBSITE
+// ==========================================
 
 
-/* 1. DATA ARTIKEL */
+// 1. DATA ARTIKEL BLOG
+// Kamu bisa mengubah judul, kategori, tanggal,
+// ringkasan, isi cerita, dan nama file foto.
+// Nama foto harus sesuai dengan file di folder img.
 
-const articles = [
+const artikel = [
     {
-        id: 1,
-        title: "Memulai Perjalanan Belajar Pemrograman",
-        category: "Teknologi",
-        date: "19 Oktober 2026",
-        excerpt: "Memahami dasar HTML, CSS, dan JavaScript sebagai langkah awal membangun website.",
-        content: `
-            <p>Belajar pemrograman bisa dimulai dari hal sederhana. HTML membangun struktur halaman, CSS mengatur tampilan, dan JavaScript memberikan interaksi.</p>
-            <p>Mulailah dengan membuat proyek kecil, mencoba kode sendiri, dan memahami setiap kesalahan yang ditemukan.</p>
-            <p>Kemampuan berkembang melalui latihan yang konsisten, bukan hanya dengan membaca teori.</p>
-        `
+        judul: "Hari-Hari Sederhana yang Berarti",
+        kategori: "Keseharian",
+        tanggal: "19 Oktober 2026",
+        ringkasan: "Tentang kegiatan sehari-hari dan cara menikmati momen sederhana dalam hidup.",
+        foto: "img/cerita-1.jpg",
+        isi: [
+            "Setiap hari memiliki cerita tersendiri. Ada kegiatan yang sudah biasa dilakukan, ada pengalaman baru, dan ada momen sederhana yang membuat hari terasa berharga.",
+            "Aku ingin belajar menikmati proses kehidupan tanpa harus selalu menunggu sesuatu yang besar terjadi. Bagiku, hal-hal kecil juga layak untuk diingat.",
+            "Melalui blog ini, aku ingin mencatat perjalanan hari demi hari agar bisa kubaca kembali di masa depan."
+        ]
     },
     {
-        id: 2,
-        title: "Konsistensi dalam Pengembangan Diri",
-        category: "Pengembangan Diri",
-        date: "18 Oktober 2026",
-        excerpt: "Perubahan besar dapat dimulai dari kebiasaan kecil yang dilakukan secara teratur.",
-        content: `
-            <p>Kita tidak harus menguasai semuanya dalam satu hari. Memberikan waktu untuk belajar sedikit demi sedikit dapat membantu membangun pemahaman.</p>
-            <p>Tentukan tujuan yang realistis, evaluasi perkembangan, dan berikan diri sendiri kesempatan untuk memperbaiki kesalahan.</p>
-            <p>Proses yang konsisten membantu kita berkembang secara bertahap.</p>
-        `
+        judul: "Belajar Menjadi Lebih Baik",
+        kategori: "Pengalaman",
+        tanggal: "18 Oktober 2026",
+        ringkasan: "Setiap pengalaman memberikan kesempatan untuk belajar dan memperbaiki diri.",
+        foto: "img/cerita-2.jpg",
+        isi: [
+            "Dalam kehidupan, selalu ada hal baru yang bisa dipelajari. Terkadang semuanya berjalan lancar, tetapi terkadang aku juga perlu mencoba lagi.",
+            "Aku ingin menggunakan waktu dengan lebih baik, bertanggung jawab terhadap kegiatan sehari-hari, dan berani mencoba hal-hal yang bermanfaat.",
+            "Aku percaya bahwa kemajuan kecil tetap berarti selama aku terus berusaha."
+        ]
     },
     {
-        id: 3,
-        title: "Memahami Dasar Bisnis",
-        category: "Bisnis",
-        date: "17 Oktober 2026",
-        excerpt: "Memulai bisnis membutuhkan pemahaman pelanggan, perencanaan, dan pengelolaan keuangan.",
-        content: `
-            <p>Bisnis bukan hanya tentang menjual produk. Bisnis juga berkaitan dengan memahami kebutuhan pelanggan dan memberikan solusi yang bernilai.</p>
-            <p>Sebelum memulai, pelajari calon pelanggan, biaya operasional, harga jual, dan strategi pemasaran.</p>
-            <p>Evaluasi hasil secara berkala agar keputusan bisnis didasarkan pada informasi yang jelas.</p>
-        `
-    },
-    {
-        id: 4,
-        title: "Belajar dari Setiap Pengalaman",
-        category: "Pengalaman",
-        date: "16 Oktober 2026",
-        excerpt: "Pengalaman memberikan kesempatan untuk memahami sesuatu dari sudut pandang yang berbeda.",
-        content: `
-            <p>Setiap pengalaman dapat memberikan pelajaran baru. Hal yang tidak berjalan sesuai rencana dapat menjadi kesempatan untuk mengevaluasi pendekatan kita.</p>
-            <p>Catat apa yang berhasil, pahami hal yang perlu diperbaiki, dan gunakan pengetahuan tersebut untuk langkah berikutnya.</p>
-        `
-    },
-    {
-        id: 5,
-        title: "Membangun Kebiasaan Membaca",
-        category: "Pengembangan Diri",
-        date: "15 Oktober 2026",
-        excerpt: "Membaca dan menulis membantu kita memperluas wawasan sekaligus menyusun pemikiran.",
-        content: `
-            <p>Membaca memberi kita akses terhadap ide dan pengetahuan baru. Menulis membantu menyusun informasi tersebut agar lebih mudah dipahami.</p>
-            <p>Cobalah membaca beberapa halaman setiap hari dan tuliskan hal penting yang kamu pelajari.</p>
-        `
-    },
-    {
-        id: 6,
-        title: "Mengenal Dunia Website",
-        category: "Teknologi",
-        date: "14 Oktober 2026",
-        excerpt: "Mengenal cara kerja website dan komponen yang membentuk halaman web modern.",
-        content: `
-            <p>Website umumnya dibangun menggunakan HTML, CSS, dan JavaScript. Ketiganya mempunyai fungsi yang berbeda tetapi saling melengkapi.</p>
-            <p>Setelah memahami dasar tersebut, kamu dapat mempelajari desain responsif, aksesibilitas, dan cara menerbitkan website ke internet.</p>
-        `
+        judul: "Menikmati Waktu Luang",
+        kategori: "Hobi",
+        tanggal: "17 Oktober 2026",
+        ringkasan: "Menyisihkan waktu untuk beristirahat, melakukan hobi, dan menikmati suasana.",
+        foto: "img/cerita-3.jpg",
+        isi: [
+            "Di tengah rutinitas, waktu luang memberikan kesempatan untuk beristirahat dan melakukan kegiatan yang kusukai.",
+            "Aku ingin lebih banyak menghargai waktu, menikmati suasana di sekitarku, dan menyimpan momen yang menyenangkan.",
+            "Tidak semua kenangan harus berasal dari perjalanan jauh. Terkadang, momen yang paling sederhana justru paling mudah diingat."
+        ]
     }
 ];
 
 
-/* 2. MENGAMBIL ELEMEN HTML */
+// 2. MENGAMBIL ELEMEN HTML
+// Variabel ini menghubungkan JavaScript
+// dengan bagian-bagian di dalam index.html.
 
-const articlesGrid = document.getElementById("articlesGrid");
-const searchInput = document.getElementById("searchInput");
-const filterButtons = document.getElementById("filterButtons");
-
-const articleDialog = document.getElementById("articleDialog");
-const dialogContent = document.getElementById("dialogContent");
-const dialogClose = document.getElementById("dialogClose");
+const articleGrid = document.getElementById("articleGrid");
+const emptyMessage = document.getElementById("emptyMessage");
 
 const menuToggle = document.getElementById("menuToggle");
 const navLinks = document.getElementById("navLinks");
-const themeToggle = document.getElementById("themeToggle");
-const currentYear = document.getElementById("currentYear");
+
+const articleModal = document.getElementById("articleModal");
+const modalClose = document.getElementById("modalClose");
+
+const modalCategory = document.getElementById("modalCategory");
+const modalTitle = document.getElementById("modalTitle");
+const modalDate = document.getElementById("modalDate");
+const modalImage = document.getElementById("modalImage");
+const modalBody = document.getElementById("modalBody");
 
 
-/* 3. FILTER AKTIF */
+// 3. MENAMPILKAN TAHUN OTOMATIS
+// Tahun akan mengikuti tahun perangkat pengunjung.
 
-let activeCategory = "Semua";
+document.getElementById("currentYear").textContent =
+    new Date().getFullYear();
 
 
-/* 4. MENGAMANKAN TEKS */
+// 4. MENAMPILKAN KARTU ARTIKEL
+// Fungsi ini membuat kartu berdasarkan data artikel.
 
-function escapeHTML(value) {
-    return String(value).replace(/[&<>"']/g, function (character) {
-        const entities = {
-            "&": "&amp;",
-            "<": "&lt;",
-            ">": "&gt;",
-            '"': "&quot;",
-            "'": "&#39;"
+function tampilkanArtikel(kategoriDipilih = "Semua") {
+    articleGrid.innerHTML = "";
+
+    const artikelTerpilih = artikel
+        .map((data, index) => ({ ...data, index }))
+        .filter(data => {
+            return kategoriDipilih === "Semua" ||
+                   data.kategori === kategoriDipilih;
+        });
+
+    emptyMessage.hidden = artikelTerpilih.length > 0;
+
+    artikelTerpilih.forEach(data => {
+        const kartu = document.createElement("article");
+        kartu.className = "article-card";
+
+        // Membuat gambar artikel.
+        const pembungkusGambar = document.createElement("div");
+        pembungkusGambar.className = "article-image";
+
+        const gambar = document.createElement("img");
+
+        // FOTO ARTIKEL DIATUR DI DATA ARTIKEL DI ATAS.
+        // Contoh: foto: "img/cerita-1.jpg"
+
+        gambar.src = data.foto;
+        gambar.alt = data.judul;
+        gambar.loading = "lazy";
+
+        // Jika foto belum tersedia, gunakan gambar contoh.
+        gambar.onerror = function () {
+            this.onerror = null;
+            this.src =
+                "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80";
         };
 
-        return entities[character];
+        pembungkusGambar.appendChild(gambar);
+
+        const informasi = document.createElement("div");
+        informasi.className = "article-info";
+
+        const meta = document.createElement("div");
+        meta.className = "article-meta";
+        meta.textContent = data.kategori + " · " + data.tanggal;
+
+        const judul = document.createElement("h3");
+        judul.textContent = data.judul;
+
+        const ringkasan = document.createElement("p");
+        ringkasan.textContent = data.ringkasan;
+
+        const tombol = document.createElement("button");
+        tombol.className = "read-more";
+        tombol.textContent = "Baca cerita lengkap ↗";
+
+        // Ketika tombol diklik, buka cerita lengkap.
+        tombol.addEventListener("click", function () {
+            bukaArtikel(data.index);
+        });
+
+        informasi.append(meta, judul, ringkasan, tombol);
+        kartu.append(pembungkusGambar, informasi);
+        articleGrid.appendChild(kartu);
     });
 }
 
 
-/* 5. MEMBUAT KARTU ARTIKEL */
+// 5. FILTER KATEGORI ARTIKEL
+// Pengunjung bisa memilih Semua, Keseharian,
+// Pengalaman, atau Hobi.
 
-function createArticleCard(article) {
-    return `
-        <article class="article-card">
+const tombolFilter = document.querySelectorAll(".filter-btn");
 
-            <div class="article-image">
-                <span>BLOG ANDIKAAAKBAR</span>
-            </div>
+tombolFilter.forEach(tombol => {
+    tombol.addEventListener("click", function () {
 
-            <div class="article-content">
+        // Hapus status aktif dari semua tombol.
+        tombolFilter.forEach(item => {
+            item.classList.remove("active");
+        });
 
-                <span class="article-category">
-                    ${escapeHTML(article.category)}
-                </span>
+        // Tandai tombol yang dipilih.
+        this.classList.add("active");
 
-                <h3>${escapeHTML(article.title)}</h3>
-
-                <p>${escapeHTML(article.excerpt)}</p>
-
-                <div class="article-meta">
-
-                    <time>${escapeHTML(article.date)}</time>
-
-                    <button
-                        class="read-more"
-                        type="button"
-                        data-article-id="${article.id}">
-                        BACA ARTIKEL →
-                    </button>
-
-                </div>
-            </div>
-
-        </article>
-    `;
-}
-
-
-/* 6. MENAMPILKAN ARTIKEL */
-
-function renderArticles() {
-    if (!articlesGrid) return;
-
-    const keyword = searchInput
-        ? searchInput.value.trim().toLowerCase()
-        : "";
-
-    const results = articles.filter(function (article) {
-        const categoryMatches =
-            activeCategory === "Semua" ||
-            article.category === activeCategory;
-
-        const allText = [
-            article.title,
-            article.category,
-            article.excerpt,
-            article.content
-        ].join(" ").toLowerCase();
-
-        return categoryMatches && allText.includes(keyword);
+        // Tampilkan artikel sesuai kategori.
+        tampilkanArtikel(this.dataset.category);
     });
+});
 
-    if (results.length === 0) {
-        articlesGrid.innerHTML = `
-            <div class="no-results">
-                <h3>Artikel tidak ditemukan</h3>
-                <p>Coba kata kunci atau kategori lainnya.</p>
-            </div>
-        `;
+
+// 6. MEMBUKA POPUP ARTIKEL
+// Isi cerita ditampilkan tanpa pindah halaman.
+
+function bukaArtikel(index) {
+    const data = artikel[index];
+
+    if (!data) {
         return;
     }
 
-    articlesGrid.innerHTML = results
-        .map(createArticleCard)
-        .join("");
+    modalCategory.textContent = data.kategori;
+    modalTitle.textContent = data.judul;
+    modalDate.textContent = data.tanggal;
+
+    // FOTO DI DALAM POPUP MENGGUNAKAN FOTO ARTIKEL.
+    modalImage.src = data.foto;
+    modalImage.alt = data.judul;
+
+    modalImage.onerror = function () {
+        this.onerror = null;
+        this.src =
+            "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80";
+    };
+
+    // Kosongkan isi sebelumnya.
+    modalBody.innerHTML = "";
+
+    // Buat paragraf untuk setiap bagian cerita.
+    data.isi.forEach(paragraf => {
+        const p = document.createElement("p");
+        p.textContent = paragraf;
+        modalBody.appendChild(p);
+    });
+
+    articleModal.classList.add("show");
+    document.body.classList.add("modal-open");
+    modalClose.focus();
 }
 
 
-/* 7. FITUR PENCARIAN */
+// 7. FUNGSI MENUTUP POPUP
 
-if (searchInput) {
-    searchInput.addEventListener("input", renderArticles);
+function tutupArtikel() {
+    articleModal.classList.remove("show");
+    document.body.classList.remove("modal-open");
 }
 
-
-/* 8. FITUR FILTER KATEGORI */
-
-if (filterButtons) {
-    filterButtons.addEventListener("click", function (event) {
-        const button = event.target.closest(".filter-btn");
-
-        if (!button) return;
-
-        activeCategory = button.dataset.category;
-
-        filterButtons.querySelectorAll(".filter-btn")
-            .forEach(function (item) {
-                const active = item === button;
-
-                item.classList.toggle("active", active);
-                item.setAttribute("aria-pressed", String(active));
-            });
-
-        renderArticles();
-    });
-}
+modalClose.addEventListener("click", tutupArtikel);
 
 
-/* 9. MEMBUKA ARTIKEL */
+// Tutup popup jika area gelap di luar artikel diklik.
 
-if (articlesGrid) {
-    articlesGrid.addEventListener("click", function (event) {
-        const button = event.target.closest("[data-article-id]");
-
-        if (!button) return;
-
-        const article = articles.find(function (item) {
-            return item.id === Number(button.dataset.articleId);
-        });
-
-        if (!article || !articleDialog || !dialogContent) return;
-
-        dialogContent.innerHTML = `
-            <span class="article-category">
-                ${escapeHTML(article.category)}
-            </span>
-
-            <h2 id="dialogTitle">
-                ${escapeHTML(article.title)}
-            </h2>
-
-            <p class="dialog-date">
-                ${escapeHTML(article.date)}
-            </p>
-
-            <div class="article-full-content">
-                ${article.content}
-            </div>
-        `;
-
-        if (typeof articleDialog.showModal === "function") {
-            articleDialog.showModal();
-        }
-    });
-}
+articleModal.addEventListener("click", function (event) {
+    if (event.target === articleModal) {
+        tutupArtikel();
+    }
+});
 
 
-/* 10. MENUTUP POPUP ARTIKEL */
+// Tutup popup menggunakan tombol Escape.
 
-if (dialogClose && articleDialog) {
-    dialogClose.addEventListener("click", function () {
-        articleDialog.close();
-    });
-
-    articleDialog.addEventListener("click", function (event) {
-        if (event.target === articleDialog) {
-            articleDialog.close();
-        }
-    });
-}
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+        tutupArtikel();
+    }
+});
 
 
-/* 11. MENU NAVIGASI MOBILE */
+// 8. MENU NAVIGASI PADA HP
+// Klik ikon menu untuk membuka atau menutup navigasi.
 
-if (menuToggle && navLinks) {
-    menuToggle.addEventListener("click", function () {
-        const isOpen = navLinks.classList.toggle("active");
+menuToggle.addEventListener("click", function () {
+    const menuTerbuka = navLinks.classList.toggle("active");
 
-        menuToggle.textContent = isOpen ? "✕" : "☰";
+    menuToggle.setAttribute("aria-expanded", menuTerbuka);
+    menuToggle.textContent = menuTerbuka ? "✕" : "☰";
+});
 
-        menuToggle.setAttribute(
-            "aria-expanded",
-            String(isOpen)
-        );
 
-        menuToggle.setAttribute(
-            "aria-label",
-            isOpen ? "Tutup menu navigasi" : "Buka menu navigasi"
-        );
-    });
+// Tutup menu setelah salah satu tautan dipilih.
 
-    navLinks.addEventListener("click", function (event) {
-        if (!event.target.closest("a")) return;
-
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", function () {
         navLinks.classList.remove("active");
-        menuToggle.textContent = "☰";
         menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.setAttribute("aria-label", "Buka menu navigasi");
+        menuToggle.textContent = "☰";
     });
-}
+});
 
 
-/* 12. MODE TERANG DAN GELAP */
+// 9. MENAMPILKAN ARTIKEL SAAT HALAMAN DIBUKA
 
-function applyTheme(isDark) {
-    document.body.classList.toggle("dark-mode", isDark);
-
-    if (!themeToggle) return;
-
-    themeToggle.textContent = isDark ? "☀" : "◐";
-
-    themeToggle.setAttribute(
-        "aria-label",
-        isDark ? "Aktifkan mode terang" : "Aktifkan mode gelap"
-    );
-}
-
-let savedTheme = null;
-
-try {
-    savedTheme = localStorage.getItem("andika-blog-theme");
-} catch (error) {
-    savedTheme = null;
-}
-
-applyTheme(savedTheme === "dark");
-
-if (themeToggle) {
-    themeToggle.addEventListener("click", function () {
-        const isDark =
-            !document.body.classList.contains("dark-mode");
-
-        applyTheme(isDark);
-
-        try {
-            localStorage.setItem(
-                "andika-blog-theme",
-                isDark ? "dark" : "light"
-            );
-        } catch (error) {
-            // Tema tetap berubah meskipun penyimpanan tidak tersedia.
-        }
-    });
-}
-
-
-/* 13. TAHUN OTOMATIS */
-
-if (currentYear) {
-    currentYear.textContent = new Date().getFullYear();
-}
-
-
-/* 14. JALANKAN WEBSITE */
-
-renderArticles();
+tampilkanArtikel();
