@@ -5,13 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Andika Akbar | Personal Journal</title>
+    <title>BLOG PRIBADI ANDIKA AKBAR</title>
+
     <meta name="description"
           content="Blog pribadi Andika Akbar tentang keseharian, pengalaman, hobi, dan cerita kehidupan.">
 
-    <!-- FONT ELEGAN DARI GOOGLE FONTS -->
+    <!-- ==================================================
+         GAMBAR 1: IKON KECIL DI TAB BROWSER (FAVICON)
+         Buat gambar sendiri bernama favicon.png
+         Simpan di folder img/
+    =================================================== -->
+    <link rel="icon" type="image/png" href="image/utama.jpeg">
+
+    <!-- FONT ELEGAN -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
           rel="stylesheet">
 
@@ -24,10 +33,15 @@
     <!-- ========== NAVIGASI ========== -->
     <header class="header">
         <nav class="navbar container">
-            <a href="#home" class="logo">ANDIKA<span>AKBAR.</span></a>
 
-            <button class="menu-toggle" id="menuToggle"
-                    aria-label="Buka menu" aria-expanded="false">
+            <a href="#home" class="logo">
+                ANDIKA<span>AKBAR.</span>
+            </a>
+
+            <button class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Buka menu"
+                    aria-expanded="false">
                 ☰
             </button>
 
@@ -38,17 +52,21 @@
                 <li><a href="#tentang">Tentang Aku</a></li>
                 <li><a href="#kontak">Kontak</a></li>
             </ul>
+
         </nav>
     </header>
 
-
-    <!-- ========== BERANDA ========== -->
     <main>
+
+        <!-- ========== BERANDA ========== -->
         <section class="hero" id="home">
             <div class="container hero-grid">
 
                 <div class="hero-text">
-                    <p class="eyebrow">JURNAL PRIBADI · ANDIKA AKBAR</p>
+
+                    <p class="eyebrow">
+                        JURNAL PRIBADI · ANDIKA AKBAR
+                    </p>
 
                     <h1>
                         Cerita kecil,<br>
@@ -68,14 +86,18 @@
                     <p class="hero-note">
                         Sebuah ruang sederhana untuk mengenang perjalanan.
                     </p>
+
                 </div>
 
-                <div class="hero-photo">
-                    <!-- GANTI FOTO DI SINI: FOTO UTAMA KAMU -->
-                    <!-- Simpan foto di img/foto-utama.jpg -->
+                <!-- =========================================
+                     GAMBAR 2: FOTO UTAMA WEBSITE
+                     Ganti foto-utama.jpg dengan nama fotomu.
+                     Simpan gambar di folder img/
+                ========================================== -->
+                <div class="hero-image">
 
                     <img
-                        src="img/foto-utama.jpg"
+                        src="image/foto3.jpeg"
                         alt="Foto utama Andika Akbar"
                         onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=85';"
                     >
@@ -84,16 +106,19 @@
                         <span>PERSONAL JOURNAL</span>
                         <span>EST. 2026</span>
                     </div>
+
                 </div>
 
             </div>
         </section>
 
-
         <!-- ========== PENGANTAR ========== -->
         <section class="intro">
             <div class="container intro-grid">
-                <p class="eyebrow">SEDIKIT TENTANG BLOG INI</p>
+
+                <p class="eyebrow">
+                    SEDIKIT TENTANG BLOG INI
+                </p>
 
                 <p class="intro-text">
                     Hidup terdiri dari banyak cerita. Ada hari yang
@@ -101,12 +126,13 @@
                     dan momen sederhana yang ingin kuingat.
                     Blog ini menjadi tempat untuk menyimpan semuanya.
                 </p>
+
             </div>
         </section>
 
-
         <!-- ========== CERITA / ARTIKEL ========== -->
         <section class="section container" id="cerita">
+
             <div class="section-heading">
                 <div>
                     <p class="eyebrow">CATATAN KEHIDUPAN</p>
@@ -118,34 +144,48 @@
                 </p>
             </div>
 
-            <!-- Tombol filter artikel -->
+            <!-- FILTER ARTIKEL -->
             <div class="filters" id="filters">
-                <button class="filter-btn active" data-category="Semua">
+
+                <button class="filter-btn active"
+                        data-category="Semua">
                     Semua
                 </button>
-                <button class="filter-btn" data-category="Keseharian">
+
+                <button class="filter-btn"
+                        data-category="Keseharian">
                     Keseharian
                 </button>
-                <button class="filter-btn" data-category="Pengalaman">
+
+                <button class="filter-btn"
+                        data-category="Pengalaman">
                     Pengalaman
                 </button>
-                <button class="filter-btn" data-category="Hobi">
+
+                <button class="filter-btn"
+                        data-category="Hobi">
                     Hobi
                 </button>
+
             </div>
 
-            <!-- Artikel akan dibuat otomatis oleh JavaScript -->
+            <!--
+                GAMBAR ARTIKEL:
+                Lokasi gambar artikel diatur melalui script.js.
+                Cari komentar GAMBAR ARTIKEL di file tersebut.
+            -->
             <div class="article-grid" id="articleGrid"></div>
 
             <p class="empty-message" id="emptyMessage" hidden>
                 Belum ada cerita dalam kategori ini.
             </p>
-        </section>
 
+        </section>
 
         <!-- ========== GALERI FOTO ========== -->
         <section class="gallery-section" id="galeri">
             <div class="container">
+
                 <div class="section-heading">
                     <div>
                         <p class="eyebrow">ALBUM PRIBADI</p>
@@ -159,59 +199,84 @@
 
                 <div class="gallery-grid">
 
+                    <!-- =====================================
+                         GAMBAR 3: FOTO GALERI PERTAMA
+                         Nama file: galeri-1.jpg
+                    ====================================== -->
                     <figure class="gallery-item">
-                        <!-- GANTI FOTO GALERI 1 -->
-                        <!-- Simpan sebagai img/galeri-1.jpg -->
-                        <img src="img/galeri-1.jpg"
-                             alt="Kenangan pertama"
-                             loading="lazy"
-                             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=800&q=80';">
+
+                        <img
+                            src="image/foto4.jpeg"
+                            alt="Kenangan pertama"
+                            loading="lazy"
+                            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=800&q=80';"
+                        >
+
                         <figcaption>01 — Sebuah Momen</figcaption>
+
                     </figure>
 
+                    <!-- =====================================
+                         GAMBAR 4: FOTO GALERI KEDUA
+                         Nama file: galeri-2.jpg
+                    ====================================== -->
                     <figure class="gallery-item">
-                        <!-- GANTI FOTO GALERI 2 -->
-                        <!-- Simpan sebagai img/galeri-2.jpg -->
-                        <img src="img/galeri-2.jpg"
-                             alt="Pemandangan favorit"
-                             loading="lazy"
-                             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80';">
+
+                        <img
+                            src="image/2.jpeg"
+                            alt="Pemandangan favorit"
+                            loading="lazy"
+                            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80';"
+                        >
+
                         <figcaption>02 — Suasana Hari</figcaption>
+
                     </figure>
 
+                    <!-- =====================================
+                         GAMBAR 5: FOTO GALERI KETIGA
+                         Nama file: galeri-3.jpg
+                    ====================================== -->
                     <figure class="gallery-item">
-                        <!-- GANTI FOTO GALERI 3 -->
-                        <!-- Simpan sebagai img/galeri-3.jpg -->
-                        <img src="img/galeri-3.jpg"
-                             alt="Aktivitas sehari-hari"
-                             loading="lazy"
-                             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1490730141103-6cac27aaab94?auto=format&fit=crop&w=800&q=80';">
+
+                        <img
+                            src="image/foto23.jpeg"
+                            alt="Aktivitas sehari-hari"
+                            loading="lazy"
+                            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1490730141103-6cac27aaab94?auto=format&fit=crop&w=800&q=80';"
+                        >
+
                         <figcaption>03 — Kenangan Lainnya</figcaption>
+
                     </figure>
 
                 </div>
             </div>
         </section>
 
-
         <!-- ========== TENTANG AKU ========== -->
         <section class="section container" id="tentang">
             <div class="about-grid">
 
+                <!-- =====================================
+                     GAMBAR 6: FOTO PROFIL PRIBADI
+                     Nama file: profil.jpg
+                ====================================== -->
                 <div class="about-photo">
-                    <!-- GANTI FOTO DI SINI: FOTO PROFIL -->
-                    <!-- Simpan sebagai img/profil.jpg -->
 
                     <img
-                        src="img/profil.jpg"
+                        src="image/foto1.webp"
                         alt="Foto profil Andika Akbar"
                         loading="lazy"
                         onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=85';"
                     >
+
                 </div>
 
                 <div class="about-text">
+
                     <p class="eyebrow">KENAL LEBIH DEKAT</p>
+
                     <h2>Halo, aku Andika.</h2>
 
                     <p>
@@ -228,72 +293,108 @@
                         kembali.
                     </p>
 
-                    <p class="signature">Salam hangat, Andika.</p>
+                    <p class="signature">
+                        Salam hangat, Andika.
+                    </p>
+
                 </div>
 
             </div>
         </section>
 
-
         <!-- ========== KONTAK ========== -->
         <section class="contact-section" id="kontak">
             <div class="container contact-content">
+
                 <p class="eyebrow">TERHUBUNG</p>
+
                 <h2>Mari tetap terhubung.</h2>
 
                 <p>
                     Kamu bisa menemukan aku melalui tautan di bawah ini.
                 </p>
 
-                <!-- GANTI # DENGAN LINK MEDIA SOSIAL KAMU -->
+                <!-- GANTI LINK DI BAWAH DENGAN LINK MILIKMU -->
                 <div class="social-links">
-                    <a href="#" target="_blank" rel="noopener">Instagram ↗</a>
-                    <a href="#" target="_blank" rel="noopener">TikTok ↗</a>
-                    <a href="mailto:emailkamu@example.com">Email ↗</a>
+
+                    <a href="#"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Instagram ↗
+                    </a>
+
+                    <a href="#"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        TikTok ↗
+                    </a>
+
+                    <a href="mailto:emailkamu@example.com">
+                        Email ↗
+                    </a>
+
                 </div>
+
             </div>
         </section>
-    </main>
 
+    </main>
 
     <!-- ========== FOOTER ========== -->
     <footer class="footer">
         <div class="container footer-inner">
-            <a href="#home" class="logo">ANDIKA<span>AKBAR.</span></a>
+
+            <a href="#home" class="logo">
+                ANDIKA<span>AKBAR.</span>
+            </a>
 
             <p>
                 © <span id="currentYear"></span> Andika Akbar.
                 Dibuat dengan cerita dan kenangan.
             </p>
 
-            <a href="#home" class="back-top">Kembali ke atas ↑</a>
+            <a href="#home" class="back-top">
+                Kembali ke atas ↑
+            </a>
+
         </div>
     </footer>
 
-
-    <!-- ========== POPUP UNTUK MEMBACA ARTIKEL ========== -->
-    <div class="modal" id="articleModal"
-         role="dialog" aria-modal="true"
+    <!-- ========== POPUP ARTIKEL ========== -->
+    <div class="modal"
+         id="articleModal"
+         role="dialog"
+         aria-modal="true"
          aria-labelledby="modalTitle">
 
         <div class="modal-content">
-            <button class="modal-close" id="modalClose"
-                    aria-label="Tutup artikel">×</button>
+
+            <button class="modal-close"
+                    id="modalClose"
+                    aria-label="Tutup artikel">
+                ×
+            </button>
 
             <p class="eyebrow" id="modalCategory"></p>
+
             <h2 id="modalTitle">Judul cerita</h2>
+
             <p class="modal-date" id="modalDate"></p>
 
-            <!-- FOTO ARTIKEL DITAMPILKAN OLEH JAVASCRIPT -->
-            <img id="modalImage" src="" alt=""
-                 class="modal-image">
+            <!-- GAMBAR ARTIKEL SAAT POPUP DIBUKA -->
+            <img id="modalImage"
+                 src=""
+                 alt=""
+                 class="modal-image"
+                 hidden>
 
             <div id="modalBody" class="modal-body"></div>
+
         </div>
     </div>
 
-
     <!-- FILE JAVASCRIPT -->
     <script src="script.js"></script>
+
 </body>
 </html>

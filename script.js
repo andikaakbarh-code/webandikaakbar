@@ -105,8 +105,8 @@ function tampilkanArtikel(kategoriDipilih = "Semua") {
         // FOTO ARTIKEL DIATUR DI DATA ARTIKEL DI ATAS.
         // Contoh: foto: "img/cerita-1.jpg"
 
-        gambar.src = data.foto;
-        gambar.alt = data.judul;
+        gambar.src = "img/foto2.jpeg"
+        gambar.alt = "img/foto2.jpeg"
         gambar.loading = "lazy";
 
         // Jika foto belum tersedia, gunakan gambar contoh.
